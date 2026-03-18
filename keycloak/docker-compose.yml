@@ -1,0 +1,21 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:24.0.0
+    container_name: keycloak-portfolio
+    # O comando --import-realm faz a mágica acontecer
+    command: start-dev --import-realm
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+      - KC_HOSTNAME=localhost
+      - KC_HTTP_ENABLED=true
+    ports:
+      - "8080:8080"
+    volumes:
+      - keycloak_data:/opt/keycloak/data
+      # Mapeia o JSON para a pasta de importação do Keycloak
+      - ./realm-export.json:/opt/keycloak/data/import/realm.json
+    restart: unless-stopped
+
+volumes:
+  keycloak_data:
