@@ -10,7 +10,10 @@
       "rootUrl": "http://localhost:4200",
       "baseUrl": "http://localhost:4200",
       "redirectUris": ["http://localhost:4200/*"],
-      "webOrigins": ["http://localhost:4200"],
+      "webOrigins": [
+        "http://localhost:4200",
+        "+"
+      ],
       "standardFlowEnabled": true
     }
   ],

@@ -1,0 +1,35 @@
+<mat-toolbar
+  color="primary"
+  class="main-toolbar"
+>
+  <span>Rss Portfolio</span>
+
+  <span class="spacer"></span>
+
+  <button mat-icon-button [matMenuTriggerFor]="userMenu" aria-label="Menu do usuário">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+
+  <mat-menu #userMenu="matMenu" xPosition="before">
+    <div class="menu-header">
+      <p class="user-name">{{ user.firstName }} {{ user.lastName }}</p>
+      <p class="user-email">{{ user.email }}</p>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <button mat-menu-item>
+      <mat-icon>person</mat-icon>
+      <span>Meu Perfil</span>
+    </button>
+
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>exit_to_app</mat-icon>
+      <span>Sair / Logout</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
+<main class="content">
+  <ng-content />
+</main>

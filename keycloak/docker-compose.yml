@@ -9,6 +9,8 @@ services:
       - KEYCLOAK_ADMIN_PASSWORD=admin
       - KC_HOSTNAME=localhost
       - KC_HTTP_ENABLED=true
+      - KC_HOSTNAME_STRICT=false
+      - KC_HOSTNAME_STRICT_HTTPS=false # Garante que ele não exija HTTPS no localhost
     ports:
       - "8080:8080"
     volumes:

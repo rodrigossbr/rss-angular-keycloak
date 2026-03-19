@@ -1,0 +1,29 @@
+<div class="login-wrapper">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <div mat-card-avatar class="app-logo">
+        <mat-icon color="primary">lock</mat-icon>
+      </div>
+      <mat-card-title>Rss Realm Auth</mat-card-title>
+      <mat-card-subtitle>Acesso Seguro ao Portfólio</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p>Bem-vindo ao sistema de integração Angular + Keycloak.</p>
+      <p class="info-text">
+        Você será redirecionado para o servidor de identidade para realizar o login com segurança.
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="loading()"
+        (click)="login()">
+        <mat-icon>login</mat-icon>
+        {{ loading() ? 'Redirecionando...' : 'Entrar com Keycloak' }}
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,46 @@
+
+.main-toolbar {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  background-color: #ffffff;
+  color: #3f51b5; // Cor primária do Material
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.menu-header {
+  padding: 16px;
+  min-width: 200px;
+
+  p {
+    margin: 0;
+  }
+
+  .user-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .user-email {
+    font-size: 0.8rem;
+    color: #666;
+  }
+}
+
+.content {
+  padding: 2rem;
+}
